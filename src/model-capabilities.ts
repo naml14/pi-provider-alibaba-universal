@@ -171,7 +171,7 @@ export const TOKEN_PLAN_MODELS: StaticModelEntry[] = [
       thinkingLevelMap: { ...QWEN_38_EFFORT },
       input: ["text", "image"],
       contextWindow: 1_000_000,
-      maxTokens: 262_144,
+      maxTokens: 131_072,
       supportsReasoningEffort: true,
     }),
   },
@@ -324,7 +324,7 @@ export function resolveAlibabaModelCapabilities(
       thinkingLevelMap: { ...QWEN_38_EFFORT },
       input: ["text", "image"],
       contextWindow: 1_000_000,
-      maxTokens: 262_144,
+      maxTokens: 131_072,
       supportsReasoningEffort: true,
     });
   }

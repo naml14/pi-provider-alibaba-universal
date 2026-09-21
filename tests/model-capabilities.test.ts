@@ -44,7 +44,7 @@ test("qwen3.8-max has three distinct effort levels and vision", () => {
   assert.equal(m.compat.thinkingFormat, "qwen");
   assert.equal(m.compat.supportsReasoningEffort, true);
   assert.equal(m.contextWindow, 1_000_000);
-  assert.equal(m.maxTokens, 262_144);
+  assert.equal(m.maxTokens, 131_072);
 });
 
 test("qwen3.8-flash is toggle-only reasoning with vision", () => {

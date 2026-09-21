@@ -63,7 +63,7 @@ waiting for API discovery:
 | Model | Reasoning | Input | Context | Max output |
 |---|---|---|---|---|
 | `auto` | — (router) | text | 128K | 8K |
-| `qwen3.8-max` | low · medium · xhigh | text · image | 1M | 256K |
+| `qwen3.8-max` | low · medium · xhigh | text · image | 1M | 128K |
 | `qwen3.8-flash` | off · high | text · image | 1M | 64K |
 | `qwen3.7-max` | off · high | text | 1M | 64K |
 | `qwen3.7-plus` | off · high | text · image | 1M | 64K |
