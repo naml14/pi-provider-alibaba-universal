@@ -5,23 +5,27 @@ on:
     types: [published]
 
 permissions:
-  contents: read
   id-token: write
+  contents: read
 
 jobs:
   publish:
     runs-on: ubuntu-latest
     environment: npm
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
-          node-version: 22
-          registry-url: https://registry.npmjs.org
+          # Node 24 ships npm 11.x. Trusted publishing requires npm >= 11.5.1;
+          # Node 22 still bundles npm 10 and cannot perform the OIDC exchange.
+          node-version: '24'
+          registry-url: 'https://registry.npmjs.org'
+          package-manager-cache: false
 
       - run: npm ci
 
       - run: npm run verify
 
-      - run: npm publish --provenance --access public
+      # Provenance is generated automatically by OIDC trusted publishing.
+      - run: npm publish
