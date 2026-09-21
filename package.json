@@ -51,7 +51,11 @@
   "author": "Andres",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git+https://github.com/naml14/pi-provider-alibaba-universal.git"
+  },
+  "homepage": "https://github.com/naml14/pi-provider-alibaba-universal#readme",
+  "bugs": {
+    "url": "https://github.com/naml14/pi-provider-alibaba-universal/issues"
   },
   "publishConfig": {
     "access": "public"
