@@ -1,5 +1,7 @@
 # pi-provider-alibaba-universal
 
+[![CI](https://github.com/naml14/pi-provider-alibaba-universal/actions/workflows/ci.yml/badge.svg)](https://github.com/naml14/pi-provider-alibaba-universal/actions/workflows/ci.yml)
+
 Alibaba Cloud Model Studio providers for [Pi](https://pi.dev/).
 
 Six providers covering every Alibaba plan — Coding Plan, Token Plan, and
