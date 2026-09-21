@@ -1,0 +1,62 @@
+{
+  "name": "pi-provider-alibaba-universal",
+  "version": "1.0.0",
+  "description": "Alibaba Cloud Model Studio providers for Pi — all plans, all chat models, correct reasoning controls",
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "pi-provider",
+    "alibaba",
+    "dashscope",
+    "token-plan",
+    "coding-plan",
+    "qwen",
+    "deepseek",
+    "glm",
+    "reasoning"
+  ],
+  "type": "module",
+  "main": "./src/index.ts",
+  "exports": {
+    ".": {
+      "import": "./src/index.ts",
+      "types": "./src/index.ts"
+    }
+  },
+  "files": [
+    "src"
+  ],
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*",
+    "@earendil-works/pi-ai": "*"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-ai": "^0.84.2",
+    "@earendil-works/pi-coding-agent": "^0.84.2",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.3"
+  },
+  "pi": {
+    "extensions": [
+      "./src/index.ts"
+    ]
+  },
+  "scripts": {
+    "test": "tsx --test tests/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "verify": "npm run typecheck && npm test && npm pack --dry-run",
+    "prepublishOnly": "npm run verify"
+  },
+  "license": "MIT",
+  "author": "Andres",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=22.19.0"
+  }
+}
